@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">SampleConstraintLayout</string>
-    <string name="tEmail">Email</string>
-    <string name="tPassword">Password</string>
-    <string name="bsignin">Sign-In</string>
+    <string name="eEmail">Masukan Email</string>
+    <string name="ePassword">Masukan Password</string>
+    <string name="btSignin">Sign-In</string>
 </resources>
