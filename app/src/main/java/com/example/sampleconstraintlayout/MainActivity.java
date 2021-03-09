@@ -39,9 +39,20 @@ public class MainActivity extends AppCompatActivity {
                             "LOGIN SUKSES || email : " + nama + " password : " + password + "", Toast.LENGTH_LONG);
                     t.show();
                 }
-                else{
-                    Toast.makeText((getApplicationContext()), "Email dan Password Anda salah",
-                            Toast.LENGTH_SHORT).show();
+
+                    else if (!edemail.getText().toString().equals("okky@mail.com")) {
+                        Toast t = Toast.makeText(getApplicationContext(),
+                                " Email salah ", Toast.LENGTH_SHORT);
+                        t.show();
+                    }
+                    else if (!edpassword.getText().toString().equals("okky123")) {
+                        Toast t = Toast.makeText(getApplicationContext(),
+                                " Password salah ", Toast.LENGTH_SHORT);
+                        t.show();
+                    }
+                    else{
+                        Toast.makeText((getApplicationContext()), "Email atau Password Anda salah",
+                                Toast.LENGTH_SHORT).show();
                 }
             }
         });
