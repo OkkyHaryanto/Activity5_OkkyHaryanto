@@ -20,24 +20,22 @@ public class MainActivity extends AppCompatActivity {
 
     String nama, password;
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu,menu);
+        getMenuInflater().inflate(R.menu.menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
         if (item.getItemId() == R.id.mnDaftar)
         {
-            Intent i = new Intent(getApplicationContext(), ActivityDaftar.class);
-            startActivity(i);
-        }
+            Intent i = new Intent(getApplicationContext(), pendaftaran.class);
+        startActivity(i);
+    }
         return super.onOptionsItemSelected(item);
     }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

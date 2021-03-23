@@ -9,11 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SampleConstraintLayout">
-        <activity android:name=".ActivityDaftar"
-            android:parentActivityName=".MainActivity"></activity>
-        <activity android:name=".ActivityHasil"></activity>
+        <activity android:name=".pendaftaran"></activity>
         <activity
-            android:name=".ActivityKedua"
+            android:name=".ActivityHasil"
             android:label="@string/label2"
             android:parentActivityName=".MainActivity" />
         <activity android:name=".MainActivity">
@@ -23,6 +21,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>
