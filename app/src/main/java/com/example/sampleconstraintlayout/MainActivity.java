@@ -1,11 +1,12 @@
 package com.example.sampleconstraintlayout;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Patterns;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,6 +20,25 @@ public class MainActivity extends AppCompatActivity {
 
     String nama, password;
 
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        if (item.getItemId() == R.id.mnDaftar)
+        {
+            Intent i = new Intent(getApplicationContext(), ActivityDaftar.class);
+            startActivity(i);
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnLogin=findViewById(R.id.btSignin);
 
-        edemail=findViewById(R.id.edEmail);
+        edemail=findViewById(R.id.EdEmail);
 
         edpassword=findViewById(R.id.edPassword);
 
@@ -73,6 +93,8 @@ public class MainActivity extends AppCompatActivity {
                                 "Login Gagal", Toast.LENGTH_LONG);
 
                         t.show();
+
+
             }     }
             }
         });
